@@ -21,9 +21,7 @@
 		<p>Movies</p>
 		<input type = 'text' placeholder = 'Movies' class = 'input2'>
 		
-		<div>
-			<input type = 'submit' class = 'submit'>
-		</div>
+		
 		<div class = 'amount'>
 			0
 		</div>
@@ -40,9 +38,9 @@
 		let submit = document.querySelector('.submit')
 		let amount = document.querySelector('.amount')	
 		let answer
-		submit.addEventListener('click',function(){
+		document.addEventListener('keyup',function(){
 		answer = parseInt(isEmpty(input1.value) ) + parseInt				(isEmpty(input2.value*3))
-		amount.innerHTML = `${answer}Birr`
+		amount.innerHTML = `${answer} Birr`
 		})
 		
 })
