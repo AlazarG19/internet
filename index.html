@@ -1,0 +1,51 @@
+<!DOCType html>
+<html>
+	<head>
+		<title>Code</title>
+		<style>
+		body{
+			background-color : #D3D3D3}
+		.amount{
+			font-size : 250px;
+			text-align : center;
+			}
+		</style>	
+	</head>
+	<body>
+		<h1>Downloaded films</h1>
+		<p>Series</p>
+
+		<input type = 'text' placeholder = 'series' class = 'input1'>
+		
+
+		<p>Movies</p>
+		<input type = 'text' placeholder = 'Movies' class = 'input2'>
+		
+		<div>
+			<input type = 'submit' class = 'submit'>
+		</div>
+		<div class = 'amount'>
+			0
+		</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+		function isEmpty(item){
+		if (item === ''){
+			return 0	
+		}else{
+			return item}}
+		let input1 = document.querySelector('.input1')
+		let input2 = document.querySelector('.input2')
+		let submit = document.querySelector('.submit')
+		let amount = document.querySelector('.amount')	
+		let answer
+		submit.addEventListener('click',function(){
+		answer = parseInt(isEmpty(input1.value) ) + parseInt				(isEmpty(input2.value*3))
+		amount.innerHTML = `${answer}Birr`
+		})
+		
+})
+	</script>
+	</body>
+</html>
